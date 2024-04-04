@@ -1,0 +1,13 @@
+server:
+  port: 0
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${random.value}
+  client:
+    server-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+spring:
+  application:
+    name: user-service
